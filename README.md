@@ -22,7 +22,7 @@ This repository adheres to Clean Architecture (Ports & Adapters) to remain cloud
 │   ├── adapters/                # EXTERNAL IMPLEMENTATIONS (database_repositories, client_extensions)
 │   ├── core/                    # FOUNDATIONS
 │   │   ├── config/              # Dynamic settings & structlog setup
-│   │   └── constants.py         # Immutable application metadata
+│   │   └── metadata.py          # Immutable application metadata
 │   ├── domain/                  # PURE BUSINESS LÓGICA (Entities, Value Objects)
 │   ├── entrypoints/             # TRIGGERS (api, jobs, cli.py)
 │   ├── interfaces/              # THE PORTS (Abstract contracts)
@@ -70,7 +70,7 @@ make install-dev
 # Step B: MANDATORY - Activate local pre-commit & pre-push security hooks
 make install-hooks
 ```
-⚠️ CRITICAL SECURITY NOTE: > If you skip running make install-hooks, your local Git commits will NOT be audited by Gitleaks, Semgrep, or Ruff. Always ensure hooks are armed before writing any code to prevent leaking credentials or pushing architectural debt to remote branches.
+> ⚠️ **CRITICAL SECURITY NOTE:** If you skip running make install-hooks, your local Git commits will NOT be audited by Gitleaks, Semgrep, or Ruff. Always ensure hooks are armed before writing any code to prevent leaking credentials or pushing architectural debt to remote branches.
 
 ### 3. 🧪 Verifying the Setup
 To ensure your chassis is fully operational and all quality gates are working perfectly, run the global health check command:
