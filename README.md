@@ -46,7 +46,6 @@ This repository adheres to Clean Architecture (Ports & Adapters) to remain cloud
 
 - Python `>=3.12,<3.13` (recommended)
 - UV `0.11.x`
-- Git LFS required for tracking model weights in the `models/` directory
 - Docker
 - make
 
