@@ -1,0 +1,31 @@
+[project]
+name = "python-clean-architecture-boilerplate"
+version = "0.1.0"
+description = "A production-ready enterprise skeleton built with Clean Architecture, DDD, and automated DevSecOps pipelines."
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "pydantic>=2.13.4",
+    "pydantic-settings>=2.14.2",
+    "structlog>=26.1.0",
+    "typer>=0.26.8",
+]
+
+[dependency-groups]
+dev = [
+    "bandit>=1.9.4",
+    "codespell>=2.4.2",
+    "colorama>=0.4.6",
+    "deptry>=0.25.1",
+    "jupyterlab>=4.6.0",
+    "mypy>=2.1.0",
+    "pip-audit>=2.10.1",
+    "pre-commit>=4.6.0",
+    "pydoclint>=0.8.7",
+    "pytest>=9.1.1",
+    "pytest-cov>=7.1.0",
+    "ruff>=0.15.20",
+    "semgrep>=1.168.0",
+    "xenon>=0.9.3",
+    "yamllint>=1.38.0",
+]

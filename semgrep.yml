@@ -1,0 +1,17 @@
+---
+rules:
+  - id: domain-must-be-pure
+    message: >
+      Architecture violation: The Domain layer must be pure
+      and cannot import from Adapters or Entrypoints.
+    severity: ERROR
+    languages:
+      - python
+    patterns:
+      - pattern: "from src.$LAYER import $X"
+      - metavariable-regex:
+          metavariable: "$LAYER"
+          regex: "(adapters|entrypoints)"
+    paths:
+      include:
+        - "**/src/domain/**/*"

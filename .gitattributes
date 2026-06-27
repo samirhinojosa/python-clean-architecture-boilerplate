@@ -1,0 +1,7 @@
+# Tracking large binary files in the models/ folder using Git LFS
+models/**/*.onnx filter=lfs diff=lfs merge=lfs -text
+models/**/*.bin filter=lfs diff=lfs merge=lfs -text
+models/**/*.pdmodel filter=lfs diff=lfs merge=lfs -text
+models/**/*.pdiparams filter=lfs diff=lfs merge=lfs -text
+models/**/*.pt filter=lfs diff=lfs merge=lfs -text
+models/**/*.pth filter=lfs diff=lfs merge=lfs -text

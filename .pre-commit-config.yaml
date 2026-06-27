@@ -1,0 +1,100 @@
+---
+default_stages: [pre-commit]
+
+repos:
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.30.1
+    hooks:
+      - id: gitleaks
+
+  - repo: local
+    hooks:
+      # --- Fast formatting & linting (pre-commit) ---
+      - id: ruff-format
+        name: ruff format
+        entry: uv run ruff format
+        language: system
+        types: [python]
+        stages: [pre-commit]
+
+      - id: ruff-check
+        name: ruff check
+        entry: uv run ruff check --fix
+        language: system
+        types: [python]
+        stages: [pre-commit]
+
+      - id: codespell
+        name: codespell
+        entry: uv run codespell
+        language: system
+        types: [text]
+        exclude: ^(uv\.lock)$
+        stages: [pre-commit]
+
+      - id: yamllint
+        name: yamllint
+        entry: uv run yamllint
+        language: system
+        types: [yaml]
+        stages: [pre-commit]
+
+      # TODO: Re-integrate database linting (e.g., sqlfluff) once
+      # the target database engine is officially defined.
+
+      - id: semgrep
+        name: semgrep security & architecture scan
+        entry: >
+          uv run semgrep scan --config auto
+          --config semgrep.yml --error
+        language: system
+        pass_filenames: false
+        stages: [pre-commit]
+
+      # --- Heavier checks (pre-push) ---
+      - id: mypy
+        name: mypy
+        entry: uv run mypy src tests
+        language: system
+        types: [python]
+        pass_filenames: false
+        stages: [pre-push]
+
+      - id: pydoclint
+        name: pydoclint
+        entry: uv run pydoclint
+        language: system
+        types: [python]
+        stages: [pre-push]
+
+      - id: bandit
+        name: bandit
+        entry: uv run bandit -c pyproject.toml -r src
+        language: system
+        types: [python]
+        pass_filenames: false
+        stages: [pre-push]
+
+      - id: xenon
+        name: xenon
+        entry: >
+          uv run xenon --max-absolute B
+          --max-modules A --max-average A src
+        language: system
+        types: [python]
+        pass_filenames: false
+        stages: [pre-push]
+
+      - id: deptry
+        name: deptry
+        entry: uv run deptry .
+        language: system
+        pass_filenames: false
+        stages: [pre-push]
+
+      - id: pip-audit
+        name: pip-audit
+        entry: uv run pip-audit
+        language: system
+        pass_filenames: false
+        stages: [pre-push]
