@@ -50,23 +50,34 @@ This repository adheres to Clean Architecture (Ports & Adapters) to remain cloud
 - Docker
 - make
 
-## Local Setup & Installation
+## 🚀 Local Setup & Quickstart
 
-1. Setup the local environment variables. The application uses a strict fail-fast configuration model.
+Follow these steps in order to set up your local development environment and activate automated security gates.
+
+### 1. Environment Configuration
+The application uses a strict fail-fast configuration model. Create your local environment file:
 ```bash
 cp .env.example .env
-# Edit .env with your local credentials if necessary
+# Open .env and adjust your local DATABASE_URL if necessary
 ```
 
-2. Create a `uv` virtual environment (example) with all packages :
-
+### 2. Dependency & Git Hooks Installation
+Instead of running loose commands, use the provided infrastructure shortcuts to sync your environment and arm your local Git security guards in one go:
 ```bash
-# For development
-uv sync
+# Step A: Install the project and all development tools using uv
+make install-dev
 
-# For production
-uv sync --no-dev
+# Step B: MANDATORY - Activate local pre-commit & pre-push security hooks
+make install-hooks
 ```
+⚠️ CRITICAL SECURITY NOTE: > If you skip running make install-hooks, your local Git commits will NOT be audited by Gitleaks, Semgrep, or Ruff. Always ensure hooks are armed before writing any code to prevent leaking credentials or pushing architectural debt to remote branches.
+
+### 3. 🧪 Verifying the Setup
+To ensure your chassis is fully operational and all quality gates are working perfectly, run the global health check command:
+```bash
+make quality
+```
+If everything returns in green, your environment is completely secured and ready for development.
 
 ### ☁️ Configuration & Auto-Cloud Detection
 
