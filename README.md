@@ -5,7 +5,7 @@
 [![Code Style: Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![Security: Trivy](https://img.shields.io/badge/security-Trivy-blueviolet)](https://aquasecurity.github.io/trivy/)
 [![Architecture: Clean](https://img.shields.io/badge/Architecture-Clean%20Architecture-success)](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
-[![Build Status](https://github.com/TU_USUARIO/python-clean-architecture-boilerplate/actions/workflows/ci.yml/badge.svg)](https://github.com/TU_USUARIO/python-clean-architecture-boilerplate/actions)
+[![CI Pipeline](https://github.com/samirhinojosa/python-clean-architecture-boilerplate/actions/workflows/ci.yml/badge.svg)](https://github.com/samirhinojosa/python-clean-architecture-boilerplate/actions/workflows/ci.yml)
 
 A production-ready enterprise skeleton for high-performance Python applications...
 
