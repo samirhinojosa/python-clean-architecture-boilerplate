@@ -1,11 +1,16 @@
 # Python Clean Architecture Boilerplate
 
-[![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/release/python-3120/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Code Style: Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![CI Pipeline](https://github.com/samirhinojosa/python-clean-architecture-boilerplate/actions/workflows/ci.yml/badge.svg)](https://github.com/samirhinojosa/python-clean-architecture-boilerplate/actions)
 [![Security: Trivy](https://img.shields.io/badge/security-Trivy-blueviolet)](https://aquasecurity.github.io/trivy/)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
+
+[![Code Style: Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![Checked with mypy](https://www.mypy-lang.org/static/mypy_badge.svg)](https://mypy-lang.org/)
+
+[![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/release/python-3120/)
+[![Package Manager: uv](https://img.shields.io/badge/uv-Fast-magenta)](https://github.com/astral-sh/uv)
 [![Architecture: Clean](https://img.shields.io/badge/Architecture-Clean%20Architecture-success)](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
-[![CI Pipeline](https://github.com/samirhinojosa/python-clean-architecture-boilerplate/actions/workflows/ci.yml/badge.svg)](https://github.com/samirhinojosa/python-clean-architecture-boilerplate/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A production-ready enterprise skeleton for high-performance Python applications...
 
