@@ -1,5 +1,14 @@
 # Python Clean Architecture Boilerplate
 
+[![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/release/python-3120/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Code Style: Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![Security: Trivy](https://img.shields.io/badge/security-Trivy-blueviolet)](https://aquasecurity.github.io/trivy/)
+[![Architecture: Clean](https://img.shields.io/badge/Architecture-Clean%20Architecture-success)](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
+[![Build Status](https://github.com/TU_USUARIO/python-clean-architecture-boilerplate/actions/workflows/ci.yml/badge.svg)](https://github.com/TU_USUARIO/python-clean-architecture-boilerplate/actions)
+
+A production-ready enterprise skeleton for high-performance Python applications...
+
 A production-ready enterprise skeleton for high-performance Python applications. Designed strictly under Clean Architecture (Ports & Adapters) and Domain-Driven Design (DDD) principles, this boilerplate provides a fully containerized, type-safe, and secure foundation to eliminate day-zero technical debt.
 
 ## Architecture & Design
